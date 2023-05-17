@@ -23,7 +23,7 @@ const PasswordReset = () => {
                 position: "top-center"
             });
         } else {
-            const res = await fetch("https://resetpassswordfrontend.vercel.app/sendpasswordlink", {
+            const res = await fetch("/sendpasswordlink", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

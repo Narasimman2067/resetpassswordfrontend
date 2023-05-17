@@ -2,6 +2,7 @@
   "name": "auth-front",
   "version": "0.1.0",
   "private": true,
+  "proxy":"https://resetnewpassword.vercel.app",
   "usersdatatoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiOWZhYWMwNzkzMjQzYTkwZmFmMGQiLCJpYXQiOjE2ODI2NzgzMjcsImV4cCI6MTY4Mjc2NDcyN30.h3j95xF6C_KQfP0s73ekO3GqLX5zdpuigkrCuAEDyv",
   "dependencies": {
     "@emotion/react": "^11.10.6",
