@@ -14,7 +14,7 @@ const Dashboard = () => {
   const DashboardValid = async () => {
     let token = localStorage.getItem("usersdatatoken");
 
-    const res = await fetch("/validuser", {
+    const res = await fetch("https://resetpassswordfrontend.vercel.app/validuser", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
