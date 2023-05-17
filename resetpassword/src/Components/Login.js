@@ -74,7 +74,7 @@ const Login = () => {
                 setInpval({...inpval,email:"",password:""});
             }else{
                 toast.error("Invalid Credentials", {
-                    position: "top-center",
+                    position: "bottom-right",
                     theme:"dark"
                 });
             }
