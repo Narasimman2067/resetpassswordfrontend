@@ -75,7 +75,7 @@ const Login = () => {
             }else{
                 toast.error("Invalid Credentials", {
                     position: "bottom-right",
-                    theme:"coloured"
+                    theme:"dark"
                 });
             }
         }
