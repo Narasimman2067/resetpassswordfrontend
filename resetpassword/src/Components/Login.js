@@ -12,6 +12,9 @@ const Login = () => {
         password: "",
     });
 
+    const usersdatatoken ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiOWZhYWMwNzkzMjQzYTkwZmFmMGQiLCJpYXQiOjE2ODI2NzgzMjcsImV4cCI6MTY4Mjc2NDcyN30.h3j95xF6C_KQfP0s73ekO3GqLX5zdpuigkrCuAEDyv"
+
+
     const history = useNavigate();
 
     const setVal = (e) => {
@@ -52,7 +55,7 @@ const Login = () => {
             console.log("user login succesfully done");
 
 
-            const data = await fetch("/login",{
+            const data = await fetch("https://resetnewpassword.vercel.app/login",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
@@ -66,7 +69,7 @@ const Login = () => {
             //  console.log(res);
 
             if(res.status === 201){
-                localStorage.setItem("usersdatatoken",res.result.token);
+                localStorage.setItem(usersdatatoken,res.result.token);
                 history("/dash")
                 setInpval({...inpval,email:"",password:""});
             }else{
