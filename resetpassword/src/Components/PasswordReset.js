@@ -23,7 +23,7 @@ const PasswordReset = () => {
                 position: "top-center"
             });
         } else {
-            const res = await fetch("https://auth-reset-backend.vercel.app/sendpasswordlink", {
+            const res = await fetch("/sendpasswordlink", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -60,8 +60,11 @@ const PasswordReset = () => {
                         </div>
 
                         <button className='btn' onClick={sendLink}><a href={email}>Send</a></button>
+                   
+                   <p>Note:password reset work only in (pc or windows or ios ) not in mobile</p>
                     </form>
                     <ToastContainer />
+                    
                 </div>
             </section>
         </>
