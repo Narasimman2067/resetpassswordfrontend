@@ -11,10 +11,15 @@ const Dashboard = () => {
 
   const history = useNavigate();
 
-  const DashboardValid = async () => {
-    let token = localStorage.getItem("usersdatatoken");
+  const usersdatatoken ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiOWZhYWMwNzkzMjQzYTkwZmFmMGQiLCJpYXQiOjE2ODI2NzgzMjcsImV4cCI6MTY4Mjc2NDcyN30.h3j95xF6C_KQfP0s73ekO3GqLX5zdpuigkrCuAEDyv"
 
-    const res = await fetch("/validuser", {
+
+
+
+  const DashboardValid = async () => {
+    let token = localStorage.getItem(usersdatatoken);
+
+    const res = await fetch("https://resetnewpassword.vercel.app/validuser", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
