@@ -50,7 +50,7 @@ const ForgotPassword = () => {
                 position: "top-center"
             });
         } else {
-            const res = await fetch(`https://resetpassswordfrontend.vercel.app/${id}/${token}`, {
+            const res = await fetch(`https://resetnewpassword.vercel.app/${id}/${token}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
